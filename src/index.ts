@@ -55,12 +55,6 @@ async function run() {
               product: { $toObjectId: "$_id.product" },
             },
           },
-          // // convert _id to a mongodb objectId for product using addFields
-          // {
-          //   $addFields: {
-          //     product: { $toObjectId: "$_id.product" },
-          //   },
-          // },
           // use lookup for populate or get customer other information from user's collection
           {
             $lookup: {
